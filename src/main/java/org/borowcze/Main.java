@@ -1,14 +1,13 @@
 package org.borowcze;
 
-import java.awt.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Random;
+
+import static org.borowcze.World.world;
+
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        World.runGame();
-
+        world.runGame();
 
     }
 }

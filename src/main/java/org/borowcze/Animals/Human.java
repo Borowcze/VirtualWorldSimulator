@@ -1,15 +1,16 @@
 package org.borowcze.Animals;
 
-import org.borowcze.Animal;
 import org.borowcze.World;
+
+import java.awt.*;
 
 public class Human extends Animal {
 
-    public Human(World world, int width, int height) {
-        super(world, width, height);
+    public Human(World world, Point position) {
+        super(world, position);
         strength = 5;
         initiative = 5;
-        age = 1;
+        symbol = (char) 72;
     }
 
     @Override
@@ -23,7 +24,8 @@ public class Human extends Animal {
     }
 
     @Override
-    public void draw() {
+    public char draw() {
 
+        return 0;
     }
 }

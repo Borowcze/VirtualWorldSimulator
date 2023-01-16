@@ -2,9 +2,12 @@ package org.borowcze.Plants;
 
 import org.borowcze.World;
 
-public class Milkweed extends Plant{
+import java.awt.*;
 
-    public Milkweed(World world, int width, int height) {
-        super(world, width, height);
+public class Milkweed extends Plant {
+
+    public Milkweed(World world, Point position) {
+        super(world, position);
+        symbol = (char) 109;
     }
 }

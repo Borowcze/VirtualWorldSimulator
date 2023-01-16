@@ -1,14 +1,17 @@
 package org.borowcze.Animals;
 
-import org.borowcze.Animal;
+import lombok.NoArgsConstructor;
 import org.borowcze.World;
+
+import java.awt.*;
 
 public class Tortoise extends Animal {
 
-    public Tortoise(World world, int width, int height) {
-        super(world, width, height);
+    public Tortoise(World world, Point position) {
+        super(world, position);
         strength = 2;
         initiative = 1;
+        symbol = (char) 84;
     }
 
 }

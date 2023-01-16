@@ -11,6 +11,7 @@ public class Menu {
 
     private static final Scanner SCANNER = new Scanner(System.in);
 
+
     private static int printMenu() throws IOException {
         printLogo();
         printOptions();
@@ -19,8 +20,20 @@ public class Menu {
 
     protected static void mainMenu() throws IOException {
         int menuOption = Menu.printMenu();
+        Game game = new Game();
 
-
+        switch(menuOption){
+            case 1:
+                game.newGame();
+                break;
+            case 2:
+                System.out.println("Continue part to be implemented");
+                break;
+            case 3:
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + menuOption);
+        }
     }
 
     private static void printOptions(){
@@ -39,15 +52,18 @@ public class Menu {
 
     public static int optionInput() {
         Pattern pattern = Pattern.compile("[1-3]");
-        String input;
-        while (true) {
+        boolean running = true;
+        String input = null;
+
+        while (running) {
             input = SCANNER.nextLine();
             Matcher matcher = pattern.matcher(input);
             Boolean isInputValid = matcher.matches();
             if (isInputValid) {
-                break;
+                running = false;
             } else {
-                System.out.println("Invalid input! Please try again.");
+                System.out.println("\nInvalid input! Please use one of the following:");
+                printOptions();
             }
         }
         switch (Integer.parseInt(input)) {

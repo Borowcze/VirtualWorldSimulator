@@ -1,13 +1,18 @@
 package org.borowcze.Animals;
 
-import org.borowcze.Animal;
+import lombok.NoArgsConstructor;
 import org.borowcze.World;
+
+import java.awt.*;
 
 public class Antelope extends Animal {
 
-    public Antelope(World world, int width, int height) {
-        super(world, width, height);
+    public Antelope(World world, Point position) {
+        super(world, position);
         strength = 4;
         initiative = 4;
+        symbol = (char) 65;
     }
+
+
 }
