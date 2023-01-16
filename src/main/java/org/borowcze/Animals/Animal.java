@@ -1,15 +1,14 @@
-package org.borowcze.Plants;
+package org.borowcze.Animals;
 
 import org.borowcze.Organism;
 import org.borowcze.World;
 
 import java.awt.*;
 
-public class Plant extends Organism {
+public abstract class Animal extends Organism {
 
-    public Plant(World world, Point position) {
+    public Animal(World world, Point position) {
         super(world, position);
-        initiative = 0;
     }
 
     @Override

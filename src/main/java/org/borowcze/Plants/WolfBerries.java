@@ -2,9 +2,12 @@ package org.borowcze.Plants;
 
 import org.borowcze.World;
 
+import java.awt.*;
+
 public class WolfBerries extends Plant{
 
-    public WolfBerries(World world, int width, int height) {
-        super(world, width, height);
+    public WolfBerries(World world, Point position) {
+        super(world, position);
+        symbol = (char) 98;
     }
 }
